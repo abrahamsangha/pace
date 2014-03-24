@@ -7,6 +7,6 @@ angular.module("app").config(function($routeProvider, $locationProvider) {
     controller: 'CalcController'
   });
 
-  $routeProvider.otherwise({ redirectTo: '/' });
+  $routeProvider.otherwise({ redirectTo: '/pace' });
 
 });
