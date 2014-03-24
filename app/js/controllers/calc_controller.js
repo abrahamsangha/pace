@@ -12,11 +12,11 @@ angular.module("app").controller('CalcController', function($scope) {
     var timing = $scope.calc.timingForPace;
     var distance = $scope.calc.distanceForPace;
     $scope.calc.paceOnly = (timing / distance).toFixed(2);
-  }
+  };
 
   $scope.calculateDistance = function() {
     var timing = $scope.calc.timingForDistance;
     var pace = $scope.calc.paceForDistance;
     $scope.calc.distanceOnly = (timing / pace).toFixed(2);
-  }
+  };
 });
