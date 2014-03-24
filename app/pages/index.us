@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="app">
   <head>
-    <title><%= pkg.name %></title>
+    <title>Pickup the Pace</title>
     <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
   </head>
   <body>
