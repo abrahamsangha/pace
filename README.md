@@ -1,4 +1,6 @@
-# A Lineman JS Template using Angular
+# A Pace Calculator (Lineman JS Template using Angular)
+
+## Lineman-Angular
 
 [![Build Status](https://travis-ci.org/linemanjs/lineman-angular-template.png?branch=master)](https://travis-ci.org/linemanjs/lineman-angular-template)
 
@@ -17,14 +19,10 @@ It includes the following features:
 9. [Unit Tests](https://github.com/linemanjs/lineman-angular-template/tree/master/spec) and [End-to-End Tests](https://github.com/linemanjs/lineman-angular-template/tree/master/spec-e2e)
 10. Configuration to run [Protractor](https://github.com/juliemr/protractor) for End-to-End Tests
 
-# Instructions
+# Instructions to run locally (need node and npm)
 
-1. `git clone https://github.com/linemanjs/lineman-angular-template.git my-lineman-app`
-2. `cd my-lineman-app`
-3. `sudo npm install -g lineman`
-4. `npm install`
-5. `lineman run`
-6. open your web browser to localhost:8000
+1. `lineman run`
+2. open your web browser to localhost:8000
 
 # Running Tests
 
