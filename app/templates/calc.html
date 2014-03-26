@@ -28,16 +28,18 @@
 </div> -->
 <div id="pace-only" class="row">
   <div class="large-6 large-offset-3">
-    <form name="pace-only-calculator" novalidate>
+    <form name="paceOnly" novalidate>
       <fieldset class="radius">
         <div class="row">
           <div class="large-4 columns">
             Time (minutes)
-            <input type="number" name="timing" placeholder="time (min)" ng-model="calc.timingForPace" ng-change="calculatePace()"/>
+            <input type="number" name="timing" placeholder="time (min)" ng-model="calc.timingForPace" ng-pattern="/^\d+\.?\d*/" ng-change="calculatePace()" />
+            <p ng-show="paceOnly.timing.$error.pattern" class="help-block">Non-negative number, please</p>
           </div>
           <div class="large-4 columns">
             Distance (miles)
-            <input type="number" name="distance" placeholder="distance (mi)" ng-model="calc.distanceForPace" ng-change="calculatePace()"/>
+            <input type="number" name="distance" placeholder="distance (mi)" ng-model="calc.distanceForPace" ng-pattern="/^\d+\.?\d*/" ng-change="calculatePace()"/>
+            <p ng-show="paceOnly.distance.$error.pattern" class="help-block">Non-negative number, please</p>
           </div>
           <div class="large-4 columns">
             Pace (min/mi)
@@ -50,16 +52,18 @@
 </div>
 <div id="distance-only" class="row">
   <div class="large-6 large-offset-3">
-    <form name="distance-only-calculator" novalidate>
+    <form name="distanceOnly" novalidate>
       <fieldset class="radius">
         <div class="row">
           <div class="large-4 columns">
             Time (minutes)
-            <input type="number" name="timing" placeholder="time (min)" ng-change="calculateDistance()" ng-model="calc.timingForDistance" />
+            <input type="number" name="timing" placeholder="time (min)" ng-change="calculateDistance()" ng-pattern="/^\d+\.?\d*/" ng-model="calc.timingForDistance" />
+            <p ng-show="distanceOnly.timing.$error.pattern" class="help-block">Non-negative number, please</p>
           </div>
           <div class="large-4 columns">
             Pace (min/mi)
-            <input type="number" name="pace" placeholder="pace (min/mi)" ng-model="calc.paceForDistance" ng-change="calculateDistance()"/>
+            <input type="number" name="pace" placeholder="pace (min/mi)" ng-model="calc.paceForDistance" ng-pattern="/^\d+\.?\d*/" ng-change="calculateDistance()"/>
+            <p ng-show="distanceOnly.pace.$error.pattern" class="help-block">Non-negative number, please</p>
           </div>
           <div class="large-4 columns">
             Distance (miles)
