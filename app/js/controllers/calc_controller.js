@@ -11,7 +11,9 @@ angular.module("app").controller('CalcController', function($scope) {
   $scope.calculatePace = function() {
     var timing = $scope.calc.timingForPace;
     var distance = $scope.calc.distanceForPace;
-    $scope.calc.paceOnly = (timing / distance).toFixed(2);
+    if ( timing > 0) {
+      $scope.calc.paceOnly = (timing / distance).toFixed(2);
+    }
   };
 
   $scope.calculateDistance = function() {
